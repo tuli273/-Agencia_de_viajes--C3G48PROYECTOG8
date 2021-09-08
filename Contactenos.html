@@ -5,37 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VianjandoAndo</title>
+    <link rel="stylesheet" href="css/contactenos.css">
 </head>
 <body>
     <h1>CONTACTENOS</h1>
     <p>Aqui puedes diligenciar tus datos:
     </p>
-    <form>
+    <form method="GET" action="/Contactenos/api">
         <label for="txtNombre">Nombre:</label>
-        <input id="txtNombre" type="text"> <br>
+        <input id="txtNombre" type="text" name="nombre"> <br>
         
         <label for="txtApellido">Apellido:</label>
-        <input id="txtApellido" type="text"> <br>
+        <input id="txtApellido" type="text" name="apellido"> <br>
         
         <label for="slTipoDocumento">Tipo de Documento:</label>
-        <select id="slTipoDocumento" type="text">
-            <option>Cédula de Ciudadanía</option>
-            <option>Cédula de Extrangería</option>
-            <option>Pasaporte</option>
-            <option>Tarjeta de Identidad</option>
+        <select id="slTipoDocumento" name="tipoDocumento">
+            <option value="cc">Cédula de Ciudadanía</option>
+            <option value="ce">Cédula de Extrangería</option>
+            <option value="pt">Pasaporte</option>
+            <option value="ti">Tarjeta de Identidad</option>
         </select> <br>
 
         <label for="#Documento">N° Documento:</label>
-        <input id="#Documento" type="number"> <br>
+        <input id="#Documento" type="number" name="numeroDocumento"> <br>
 
         <label>Sexo: </label>
-        <input id="men" type="radio" name="sex"> <label for="men">Masculino</label> 
-        <input id="women" type="radio" name="sex"> <label for="women">Femenino</label>
+        <input id="men" type="radio" name="sex" value="m"> 
+        <label for="men">Masculino</label> 
+        <input id="women" type="radio" name="sex" value="f"> 
+        <label for="women">Femenino</label>
         <br>
 
         <label>Escriba su solicitud:</label>
         <label><textarea name="comentarios" id="comentarios" cols="50
             " rows="10"></textarea></label>
+        <br>
+        <label for="clave">Asigne una clave:</label>
+        <input id="clave" type="password" name="contraseña"> 
+        <br>
+
+
         <button>Enviar</button>
     </form>
     <ul>
