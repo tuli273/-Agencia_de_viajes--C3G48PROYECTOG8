@@ -1,0 +1,46 @@
+body {
+    background-color:#fafbfc;
+    background-image: url("../Imagenes/FondoCrearPaquete.jpg");
+    font-style: normal;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+#divTitulo {
+    text-align: center;
+    color:rgb(83, 15, 15);
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 48px;
+    background-color: lightcyan;
+    opacity: 0.78;
+    border-radius: 10px;
+    border: solid lightcyan;
+    border-width: 1px;
+}
+
+
+#divIncluidos{
+    font-style: normal;
+    
+}
+#incluidos{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+input {
+    font-family: 'Akrobat', sans-serif;
+    border-radius: 5px;
+}
+#divForm {
+    
+    border: solid lightcyan;
+    border-width: 8px;
+    border-radius: 10px;
+    font-style: normal;
+    background-color:lightcyan;
+    background-origin:content-box;
+    width:600px;
+    opacity : 0.9;
+}

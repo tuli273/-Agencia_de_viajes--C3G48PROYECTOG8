@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Promociones</title>
+    <link rel="stylesheet" href="/css/Crear_Paquete.css">
+</head>
+<body>
+    <div class="col-xs-12" id="divTitulo">
+        <h1 class="titulo-modulo-crear-paquete">
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">CREE SU PAQUETE DE VIAJE PROMOCIONAL</font>
+            </font>
+        </h1>
+        
+    </div>
+    <br>
+    <div id="divForm">
+        <form method="GET" action="/PaquetesVigentes/api">
+            <label for="paqName">Declare un nombre para su paquete de viaje</label><br>
+            <input id="paqName" type="text" name="nombrePaquete"><br><br>
+
+            <label for="fechaInicioPaq">Indique la fecha de inicio de la promoción</label>
+            <input id="fechaInicioPaq" type="date" name="fechaInicio"><br><br>
+
+            <label for="fechaFinalPaq">Indique la fecha en que finaliza la promoción</label>
+            <input id="fechaFinalPaq" type="date" name="fechaFinal"><br><br>
+            <div id="divIncluidos">
+                <label id="incluidos">Indique que incluye el paquete:</label><br>
+                <input type="checkbox" id="ckhotel" name="hotel"> <label for="ckhotel">Hotel</label><br>
+                <input type="checkbox" id="cktiqueteIda" name="tiqueteIda"> <label for="cktiqueteIda"> Tiquete Ida</label>
+                <input type="checkbox" id="cktiqueteVuelta" name="tiquetevuelta"> <label for="cktiqueteVuelta"> Tiquete Vuelta</label><br>
+                <input type="checkbox" id="ckdesayuno" name="desayuno"> <label for="ckdesayuno"> Desayuno</label>
+                <input type="checkbox" id="ckalmuerzo" name="almuerzo"> <label for="ckalmuerzo">Almuerzo</label>
+                <input type="checkbox" id="ckcena" name="cena"> <label for="ckcena">Cena</label><br>
+                <input type="checkbox" id="ckentretenimiento" name="entretenimiento"> <label for="ckentretenimiento">Entretenimiento</label>
+                <input type="checkbox" id="ckseguro" name="seguro"> <label for="ckseguro">Seguro</label><br>
+            </div>
+            
+            <button id="enviarPaquete" onclick="alert ('PAQUETE CREADO. Desea publicarlo?')">Enviar</button>
+            
+        </form>
+    </div>
+</body>
+</html>
