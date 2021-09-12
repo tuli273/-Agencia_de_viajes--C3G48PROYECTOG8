@@ -522,59 +522,6 @@
 	</section>
 
 
-	<!-- la clase del viernes  -->
-	  <section class="ftco-section ftco-no-pb contact-section">
-		<div id="contador">
-			contador: <span id="numero"> {{ counter }} </span> 
-			{{ message }}
-		</div>
-
-		<div id="evento">
-			
-			{{ message }}
-			<button type="button" v-on:click="reverseMessage()"> Invertir </button>
-		</div>
-
-		<div id="encale">
-			<p> {{ message }} </p>
-			<input type="text" v-model="message">
-		</div>
-
-		<br> <br>
-		<div id="condicional">
-			<p v-if="isVisible"> Hola esta parte es Visible </p>
-			<p v-if="!isVisible"> Hola esta parte es !Visible </p>
-		</div>
-
-		<br> <br>
-		<div id="ciclo">
-			<ul >
-				<li v-for="datos in cadena"> {{ datos}}</li>
-			</ul>
-		</div>
-
-		<br> <br>
-		<div id="tareas">
-
-				<input type="text">
-				<button v-on:click="agregar()"> agregar </button>
-				<table>
-					<thead> 
-						<tr>Nombre</tr>
-						<tr> id</tr>
-					</thead>
-					<tbody>
-						<tr v-for="task in tareas">
-							<th> {{ task.nombre }} </th>
-							<td> {{ task.id}} </td>
-						</tr>
-					</tbody>
-				</table>
-		</div>
-
-
-	  </section>
-
     <footer class="ftco-footer bg-bottom py-5" style="background-image: url(public/images/footer-bg.jpg);">
       <div class="container">
         <div class="row mb-5">
