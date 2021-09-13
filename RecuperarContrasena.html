@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="/css/RecuperarContrasena.css">
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script> 
+    
+</head>
+<body>
+    <div id="divForm">
+        <form action="">
+            <div id="divH2">
+                <h2>RECUPERAR CONTRASEÑA</h2>
+            </div>
+            <label for="nDocumento">Recuperar con Número de Documento</label>
+            <input type="text" id="nDocumento" name="NDocumento" onpointermove="blocknDocumento()" placeholder="N° Documento">
+            <label for="correo">Recuperar con Correo Electrónco</label>
+            <input type="email" id="correo" name="Correo" onpointermove="blockCorreo()" placeholder="Correo Electrónico">
+            <button type="button" name="BtRPassword" onclick="recuperarContrasena()">RECUPERAR</button>
+            
+            <p><a href="PaginaRegistro.html">Registrese aquí</a></p>
+        </form>
+    </div>
+    <script type="text/javascript" src="/js/RecuperarContraseña.js"></script>
+    
+</body>
+</html>
