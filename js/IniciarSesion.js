@@ -1,4 +1,3 @@
-
 var getData = function(){
 
     const user = document.getElementById("user").value;
@@ -24,7 +23,7 @@ var getData = function(){
                 if (willDelete) {
                     document.getElementById("user").value = "";
                     document.getElementById("password").value = "";
-                    window.location.href = "/index.html";
+                    window.location.href = "index.html";
                 } else {
                   swal({
                     title: "GRACIAS",

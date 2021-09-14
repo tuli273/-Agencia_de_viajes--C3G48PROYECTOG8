@@ -1,5 +1,5 @@
 body{
-    background-image: url(/Imagenes/parque_tayrona.jpg);
+    background-image: url("../Imagenes/parque_tayrona.jpg");
     background-size: 100vw 100vh;
     background-attachment: fixed;
     margin: 0;

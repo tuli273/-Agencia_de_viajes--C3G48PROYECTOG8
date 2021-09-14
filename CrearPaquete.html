@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Promociones</title>
-    <!-- CSS only -->   
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    
-    <link href="/css/CrearPaquete.css" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link href="css/CrearPaquete.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
 
 </head>
+
 <body>
-    <div id="divBody" >
+    <div id="divBody">
         <div id="divTitulo">
             <h1>
-                CREE SU PAQUETE DE VIAJE PROMOCIONAL
+                CREE SU OFERTA
             </h1>
         </div>
-        <br>
 
         <form method="GET" action="/paquetes.api">
-            <div id="divNombrePaq"><h2>NOMBRE DEL PAQUETE</h2></div>
+            <div id="divNombrePaq">
+                <h2>NOMBRE DEL PAQUETE</h2>
+            </div>
             <div id="divInpNombrePaq">
-                <input type="text" class="form-control" id="inputNombrePaq" placeholder="Ejemplo: Cartagena 3 Días" name="NombrePaquete"><br>
+                <input type="text" class="form-control" onchange="getPaq()" id="inputNombrePaq" placeholder="Ejemplo: Cartagena 3 Días"
+                    name="NombrePaquete"><br>
             </div>
             <div id="divVigPaq">
                 <p>VIGENCIA DEL PAQUETE</p>
@@ -44,7 +54,8 @@
             <div id="divRowPrecio" class="row row-cols-2 justify-content-around">
                 <div class="col-auto">
                     <label for="inputPrecio" class="form-label">Escriba el valor (COP)</label>
-                    <input type="number" class="form-control" id="inputPrecio" placeholder="$" name="Precio">
+                    <input type="number" class="form-control" onchange="getPrecio()" id="inputPrecio" placeholder="$"
+                        name="Precio">
                 </div>
                 <div class="col-auto">
                     <label for="input#Personas" class="form-label">Indique cantidad de personas</label>
@@ -54,69 +65,79 @@
                         <option>Familia (4 personas)</option>
                     </select>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-8" id="inputHotel">
+                <div class="col-xs-12 col-sm-6 col-md-8" id="divHotel">
                     <div id="divLabelInputHotel"><label for="inputHotel" class="form-label">Hotel</label></div>
-                    <input class="form-control" id="inputHotel" placeholder="Ejemplo: Hotel Monarca II" name="Hotel"> 
+                    <input class="form-control" onchange="getHotel()" id="inputHotel"
+                        placeholder="Ejemplo: Hotel Monarca II" name="Hotel">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-8" id="divUbicacion">
+                    <div id="divLabelInputubicacion"><label for="inputUbicacion" class="form-label">Lugar</label></div>
+                    <input class="form-control" id="inputUbicacion" onchange="getUbicacion()"
+                        placeholder="Ejemplo: Ibagué - Tol" name="Hotel">
                 </div>
             </div>
             <div id="divQIncluye">
-                    <p>QUÉ INCLUYE</p>
+                <p>QUÉ INCLUYE</p>
             </div>
-            <div class="row row-cols-3 justify-content-center ">
-                <div class="col">
-                    <div class="form-check"->
-                        <input class="form-check-input" type="checkbox"  id="ckbxTiqIda" name="checkboxTiqIda">
-                        <label class="form-check-label" for="gridCheck">
-                        Tiquete Ida
-                        </label>
+            <div class=container>
+                <div class="row justify-content-center" id="cboxButoms">
+                    <div class="col-sm-4">
+                        <div class="form-check" ->
+                            <input class="form-check-input" type="checkbox" id="ckbxTiqIda" name="checkboxTiqIda">
+                            <label class="form-check-label" for="gridCheck">
+                                Tiquete Ida
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="col">    
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="ckbxTiqRegreso" name="checkboxTiqRegreso">
-                        <label class="form-check-label" for="gridCheck">
-                        Tiquete Regreso
-                        </label>
+                    <div class="col-sm-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ckbxTiqRegreso"
+                                name="checkboxTiqRegreso">
+                            <label class="form-check-label" for="gridCheck">
+                                Tiquete Regreso
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="col">     
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="checkboxDesayuno" name="checkboxDesayuno">
-                        <label class="form-check-label" for="gridCheck">
-                        Desayuno
-                        </label>
+                    <div class="col-sm-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkboxDesayuno"
+                                name="checkboxDesayuno">
+                            <label class="form-check-label" for="gridCheck">
+                                Desayuno
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="col"> 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="ckbxAlmuerzo" name="checkboxAlmuerzo">
-                        <label class="form-check-label" for="gridCheck">
-                        Almuerzo
-                        </label>
+                    <div class="col-sm-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ckbxAlmuerzo" name="checkboxAlmuerzo">
+                            <label class="form-check-label" for="gridCheck">
+                                Almuerzo
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="col"> 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="ckbxCena" name="checkboxCena">
-                        <label class="form-check-label" for="gridCheck">
-                        Cena
-                        </label>
+                    <div class="col-sm-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ckbxCena" name="checkboxCena">
+                            <label class="form-check-label" for="gridCheck">
+                                Cena
+                            </label>
+                        </div>
                     </div>
-                </div>    
-                <div class="col"> 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="ckbxSeguro" name="checkboxSeguro">
-                        <label class="form-check-label" for="gridCheck">
-                        Seguro
-                        </label>
+                    <div class="col-sm-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ckbxSeguro" name="checkboxSeguro">
+                            <label class="form-check-label" for="gridCheck">
+                                Seguro
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="col"> 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="ckbxTour" name="checkboxTour">
-                        <label class="form-check-label" for="gridCheck">
-                        Tour
-                        </label>
+                    <div class="col-sm-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="cboxTour" name="checkboxTour">
+                            <label class="form-check-label" for="gridCheck">
+                                Tour
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,13 +145,30 @@
                 <p>INSERTE UNA IMAGEN QUE IDENTIFIQUE AL PAQUETE</p>
             </div>
             <div class="mb-3">
-                <input name="imagenPaqueteCreado" type="file" class="form-control" aria-label="file example" required>
+                <input name="imagenPaqueteCreado" type="file" onchange="mostrar(),clearText()" id="inputImagen"
+                    class="form-control" aria-label="file example" required>
             </div>
-            <div id="divBotonGuardar">
-            <button type="submit" class="btn btn-primary">GUARDAR</button>
-            </div>
-        </form>
 
-    </body>
+            <div id="divBotonGuardar">
+                <button type="submit" class="btn btn-primary">GUARDAR</button>
+            </div>
+        </form><br><br>
+        <div>
+            <h5 id="vistaPrevia">Vista previa...</h5>
+        </div>
+        <div class="contenedor">
+            <div class="caja">
+                <div class="cajaNHotel">
+                    <p name="Precio" id="precio">Precio COP</p>
+                    <h2 name="NHotel" id="nHotel">Nombre del Paquete</h2>
+                    <p name="Ubicacion" id="ubicacion">Ciudad - Dep</p>
+                    <p name="TImagen" id="tImagen" >Aqui se verá la Imagen que representa al paquete</p>
+                    <img id="img">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/CrearPaquete.js"></script>
+</body>
 </div>
+
 </html>
