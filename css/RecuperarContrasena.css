@@ -1,0 +1,59 @@
+body{
+    background-image: url(/Imagenes/parque_tayrona.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+#divForm{
+    width: 450px;
+    margin:auto;
+    background: rgba(236, 234, 234, 0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#divH2{
+    color: rgb(43, 7, 110);
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+input{
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+}
+button{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(10, 0, 0);
+    background:deepskyblue;
+    padding: 15px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+p{
+    font-size:20px;
+    color: aliceblue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+@media(max-width:480px){
+    #divForm{
+        width: 100%;
+    }
+}

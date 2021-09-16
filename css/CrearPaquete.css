@@ -1,0 +1,161 @@
+#divBody {
+    background-color: rgb(250, 249, 252);
+    background-image: url("../Imagenes/penol.png");
+    background-size: 100vw;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    
+}
+
+input {
+    font-family: 'Akrobat', sans-serif;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+#divTitulo{
+    color: white;
+    font-family: 'Titan One', cursive;
+    text-align: left;
+}
+
+h1{
+    position: relative;
+    font-size: 10vw;
+    text-shadow: 3px 3px 2px black; 
+}
+
+#vistaPrevia{
+    color:rgb(83, 83, 95);
+    font-family: 'Alata', cursive;
+    text-align: center;
+    position: relative;
+    font-size: 5vw;
+    text-shadow: 3px 3px 2px black; 
+}
+
+form{
+    width: 600px;
+    margin: auto;
+    border-radius: 10px;
+    color:black;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    margin-top: 1px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.74);
+    border: 1px solid gray;
+    background: linear-gradient(to bottom, white, rgba(128, 128, 128, 0.322));
+    background-color:white;
+}
+#divVigPaq , #divNombrePaq, #divPrecio, #divQIncluye, #divInserteImagen{
+    text-align: center;
+    color:rgb(7, 20, 136);
+    font-size: 23px;
+}
+
+#divBotonGuardar{
+    text-align: center;
+    width: 100%;
+}
+#divLabelInputHotel, #divLabelInputubicacion {
+    width: 100%;
+    text-align: center;
+}
+/*
+#cboxButoms input {
+    width: 25px;
+	height: 25px;
+	border-radius: 5px;
+    
+}*/
+
+@media(max-width : 500px){
+    form{
+        width: 100%;
+    }
+}
+.contenedor{
+    position:relative;
+    border:1px solid blue;
+    margin: 50px auto;
+    width: 600px;
+    height: 400px;
+    background-color: blueviolet;
+    background-size: cover;
+}
+
+#img{
+    width: 598px;
+    height: 398px;
+}
+
+#nHotel{
+    position: absolute;
+    text-align: end;
+    width: auto;
+    height: 10%;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-family: 'Alata', sans-serif;
+    color: white;
+    text-shadow: 3px 3px 3px rgb(35, 7, 66);
+    font-size: 40px;
+    bottom:35px;
+    right:20px;
+}
+#precio{
+    position: absolute;
+    text-align:right;
+    width: auto;
+    height: 12%;
+    padding: 2px;
+    border-radius: 25px 3px 3px 25px;
+    background-color:orange;
+    border-left: 20px solid orange;
+    border-right: 10px solid orange;
+    font-family: 'Alata', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(173, 9, 9);
+    font-size: 30px;
+    top:10px;
+    right:20px;
+    font-weight:600;
+}
+
+#ubicacion{
+    position: absolute;
+    text-align: end;
+    width: auto;
+    height: 5%;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-family: 'Alata', sans-serif;
+    color: white;
+    text-shadow: 3px 3px 3px rgb(35, 7, 66);
+    font-size: 25px;
+    bottom:10px;
+    right:20px;
+    font-weight: 100;
+}
+
+#tImagen{
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: 5%;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-family: 'Alata', sans-serif;
+    color: white;
+    text-shadow: 3px 3px 3px rgb(35, 7, 66);
+    font-size: 25px;
+    bottom:0;
+    right:0;
+    top: 0;
+    left: 0;
+    margin: auto;
+    font-weight: 100;
+}
