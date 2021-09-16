@@ -40,6 +40,4 @@ var getData = function(){
             });
         }
              
-}
-
-    
+} 
